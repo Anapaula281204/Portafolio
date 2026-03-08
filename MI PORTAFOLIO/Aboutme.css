@@ -1,0 +1,199 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    overflow-x: hidden;
+}
+
+.top-bar {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;     
+    top: 0;             
+    z-index: 1000;   
+    transition: all 0.4s ease; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo h1 { color: #a00000; font-family: 'Playfair Display', serif; font-size: 35px; }
+.logo span { font-size: 12px; color: #666; font-weight: 500; }
+nav a { text-decoration: none; color: #333; margin-left: 25px; font-size: 13px; font-weight: 500; text-transform: uppercase; transition: 0.3s; }
+nav a:hover { color: #a00000; }
+
+/* MAIN CONTAINER */
+.about-main {
+    background-color: #6b0f1a; /* Rojo oscuro profesional */
+    color: white;
+    padding: 60px 10% 100px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.title-tags {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 10px;
+}
+
+.about-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 65px);
+    letter-spacing: 2px;
+}
+
+/* GRID LAYOUT */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* COLUMNA IZQUIERDA */
+.profile-frame {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.profile-photo {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: grayscale(20%);
+    box-shadow: 20px 20px 0px rgba(0,0,0,0.1);
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* COLUMNA DERECHA */
+.info-section {
+    margin-bottom: 50px;
+}
+
+.info-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* LISTAS Y TEXTO */
+.exp-list li {
+    list-style: none;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.exp-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #ff9a00;
+}
+
+.lang-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.lang-grid span {
+    font-size: 0.9rem;
+    display: block;
+}
+
+.skills-mini {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #ff9a00;
+}
+
+/* SOFTWARE ICONS */
+.app-logos {
+    display: flex;
+    gap: 15px;
+}
+
+.app-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #fff;
+    transition: transform 0.3s;
+}
+
+.app-icon:hover { transform: scale(1.1); }
+
+.ai { background: #330000; color: #ff9a00; border: 1px solid #ff9a00; }
+.ps { background: #001e36; color: #31a8ff; border: 1px solid #31a8ff; }
+.au { background: #00231e; color: #01edca; border: 1px solid #01edca; }
+.dr { background: #1a1a1a; color: #fff; border: 1px solid #555; }
+.cv { background: #00c4cc; color: #fff; }
+
+/* FOOTER */
+footer {
+    background-color: #f9f9f9;
+    padding: 80px 10% 40px;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-info h4 { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .profile-photo { width: 100%; max-width: 350px; height: 400px; }
+    .app-logos { justify-content: center; }
+    .lang-grid { grid-template-columns: 1fr; }
+    .exp-list li { text-align: left; }
+}
